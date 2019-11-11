@@ -25,11 +25,12 @@ android {
      }
  }
 dependencies {
-    implementation fileTree(include: ['*.jar','*.aar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "com.facebook.react:react-native:${safeExtGet('reactNativeVersion', '+')}"
 
-    implementation 'com.onesignal:OneSignal:3.11.1@aar'
+//    implementation 'com.onesignal:OneSignal:3.11.1@aar'
 
+	implementation files('libs/one_signal.jar')
     implementation 'com.android.support:cardview-v7:27.1.1'
 
     testImplementation 'junit:junit:4.12'
